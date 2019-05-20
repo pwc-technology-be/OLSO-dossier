@@ -1,0 +1,173 @@
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix qb:      <http://purl.org/linked-data/cube#> .
+<https://data.vlaanderen.be/shacl/dossier#ActiviteitShape>
+	a sh:NodeShape ;
+	sh:targetClass <http://www.w3.org/ns/prov#Activity> ;
+	sh:property [
+		sh:name "GenereertEen" ;
+		sh:description "Een activiteit kan een document genereren" ;
+		sh:path <https://data.vlaanderen.be/ns/generiek#GenereertEen> ;
+		sh:class <http://xmlns.com/foaf/0.1/Document> ;
+	] ;
+	sh:property [
+		sh:name "geplandeStart" ;
+		sh:description "Het tijdstip waarop de activiteit gepland is om te beginnen." ;
+		sh:path <https://data.vlaanderen.be/ns/generiek#geplandeStart> ;
+		sh:datatype <http://www.w3.org/2001/XMLSchema#dateTime> ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:closed false .
+
+<https://data.vlaanderen.be/shacl/dossier#AgentShape>
+	a sh:NodeShape ;
+	sh:targetClass <http://purl.org/dc/terms/Agent> ;
+	sh:property [
+		sh:name "KanHandelenInOpdrachtVan" ;
+		sh:description "Een agent kan handelen in opdracht van een andere agent." ;
+		sh:path <https://data.vlaanderen.be/ns/generiek#KanHandelenInOpdrachtVan> ;
+		sh:class <http://purl.org/dc/terms/Agent> ;
+	] ;
+	sh:closed false .
+
+<https://data.vlaanderen.be/shacl/dossier#DocumentOnderdeelShape>
+	a sh:NodeShape ;
+	sh:targetClass <https://data.vlaanderen.be/ns/generiek#DocumentOnderdeel> ;
+	sh:property [
+		sh:name "WordtVoorgesteldDoor" ;
+		sh:description "Een documentonderdeel wordt voorgesteld door een representatie." ;
+		sh:path <http://semanticscience.org/resource/SIO_000205> ;
+		sh:class <http://semanticscience.org/resource/SIO_000612> ;
+		sh:minCount 1 ;
+	] ;
+	sh:property [
+		sh:name "nummer" ;
+		sh:description "Nummer vh documentonderdeel." ;
+		sh:path <https://data.vlaanderen.be/ns/generiek#nummer> ;
+		sh:datatype <http://www.w3.org/2001/XMLSchema#integer> ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:property [
+		sh:name "type" ;
+		sh:description "Aard van het documentonderdeel." ;
+		sh:path <http://purl.org/dc/terms/type> ;
+		sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:closed false .
+
+<https://data.vlaanderen.be/shacl/dossier#DocumentShape>
+	a sh:NodeShape ;
+	sh:targetClass <http://xmlns.com/foaf/0.1/Document> ;
+	sh:property [
+		sh:name "WordtVoorgesteldDoor" ;
+		sh:description "Een document wordt voorgesteld door een representatie." ;
+		sh:path <http://semanticscience.org/resource/SIO_000205> ;
+		sh:class <http://semanticscience.org/resource/SIO_000612> ;
+		sh:minCount 1 ;
+	] ;
+	sh:property [
+		sh:name "HeeftRelatieTot" ;
+		sh:description "Een document heeft een relatie tot een document." ;
+		sh:path <https://data.vlaanderen.be/ns/generiek#HeeftRelatieTot> ;
+		sh:class <http://xmlns.com/foaf/0.1/Document> ;
+	] ;
+	sh:closed false .
+
+<https://data.vlaanderen.be/shacl/dossier#ObjectShape>
+	a sh:NodeShape ;
+	sh:targetClass <https://data.vlaanderen.be/ns/generiek#Object> ;
+	sh:property [
+		sh:name "identificator" ;
+		sh:description "TODO" ;
+		sh:path <http://www.w3.org/ns/adms#identifier> ;
+		sh:class <http://www.w3.org/ns/adms#Identifier> ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:closed false .
+
+<https://data.vlaanderen.be/shacl/dossier#BesluitShape>
+	a sh:NodeShape ;
+	sh:targetClass <http://data.vlaanderen.be/ns/besluit#Besluit> ;
+	sh:property [
+		sh:name "beschrijving" ;
+		sh:description "De beknopte beschrijving van de beslissing." ;
+		sh:path <http://data.europa.eu/eli/ontology#description> ;
+		sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:property [
+		sh:name "citeeropschrift" ;
+		sh:description "De beknopte titel of officiële korte naam van een decreet, wet, besluit... Deze wordt officieel vastgelegd. Deze benaming wordt in de praktijk gebruikt om naar de rechtsgrond te verwijzen." ;
+		sh:path <http://data.europa.eu/eli/ontology#title_short> ;
+		sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:closed false .
+
+<https://data.vlaanderen.be/shacl/dossier#DatumShape>
+	a sh:NodeShape ;
+	sh:targetClass <https://purl.org/dc/terms/Date> ;
+	sh:closed false .
+
+<https://data.vlaanderen.be/shacl/dossier#ZaakShape>
+	a sh:NodeShape ;
+	sh:targetClass <https://data.vlaanderen.be/ns/dossier#Zaak> ;
+	sh:property [
+		sh:name "Doorloopt" ;
+		sh:description "Een zaak doorloopt procedurestappen." ;
+		sh:path <https://data.vlaanderen.be/ns/dossier#Doorloopt> ;
+		sh:class <https://data.vlaanderen.be/ns/dossier#Procedurestap> ;
+		sh:minCount 1 ;
+	] ;
+	sh:property [
+		sh:name "HeeftRelatieTot" ;
+		sh:description "Een zaak heeft een relatie tot een zaak." ;
+		sh:path <https://data.vlaanderen.be/ns/dossier#HeeftRelatieTot> ;
+		sh:class <https://data.vlaanderen.be/ns/dossier#Zaak> ;
+	] ;
+	sh:closed false .
+
+<https://data.vlaanderen.be/shacl/dossier#DienstverleningconsumptieShape>
+	a sh:NodeShape ;
+	sh:targetClass <http://purl.org/vocab/cpsv#PublicService> ;
+	sh:closed false .
+
+<https://data.vlaanderen.be/shacl/dossier#ProcedurestapShape>
+	a sh:NodeShape ;
+	sh:targetClass <https://data.vlaanderen.be/ns/dossier#Procedurestap> ;
+	sh:closed false .
+
+<https://data.vlaanderen.be/shacl/dossier#RepresentatieShape>
+	a sh:NodeShape ;
+	sh:targetClass <http://semanticscience.org/resource/SIO_000612> ;
+	sh:closed false .
+
+<https://data.vlaanderen.be/shacl/dossier#DossierShape>
+	a sh:NodeShape ;
+	sh:targetClass <https://data.vlaanderen.be/ns/dossier#Dossier> ;
+	sh:property [
+		sh:name "IsNeerslagVanZaak" ;
+		sh:description "Een dossier is een neerslag van een zaak." ;
+		sh:path <https://data.vlaanderen.be/ns/dossier#IsNeerslagVanZaak> ;
+		sh:class <https://data.vlaanderen.be/ns/dossier#Zaak> ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:closed false .
+
+<https://data.vlaanderen.be/shacl/dossier#ActiviteitContextShape>
+	a sh:NodeShape ;
+	sh:targetClass <https://data.vlaanderen.be/ns/dossier#ActiviteitContext> ;
+	sh:closed false .
+
+<https://data.vlaanderen.be/shacl/dossier#ParticipatieShape>
+	a sh:NodeShape ;
+	sh:targetClass <http://data.europa.eu/m8g/Participation> ;
+	sh:closed false .
+
