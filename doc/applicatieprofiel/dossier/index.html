@@ -48,7 +48,7 @@
               <div class="head" role="contentinfo" id="respecHeader">
                 <dl>
                   <dt>Laatste aanpassing</dt>
-                  <dd>2019-05-20</dd>
+                  <dd>2019-05-29</dd>
 
 
 
@@ -142,15 +142,19 @@
                       <a href="#Activiteit context">Activiteit context</a> |
                       <a href="#Agent">Agent</a> |
                       <a href="#Besluit">Besluit</a> |
+                      <a href="#Collectie">Collectie</a> |
                       <a href="#Datum">Datum</a> |
                       <a href="#Dienstverlening (consumptie)">Dienstverlening (consumptie)</a> |
                       <a href="#Document">Document</a> |
                       <a href="#Documentonderdeel">Documentonderdeel</a> |
                       <a href="#Dossier">Dossier</a> |
+                      <a href="#Dossierstuk">Dossierstuk</a> |
                       <a href="#Entiteit">Entiteit</a> |
+                      <a href="#Object">Object</a> |
                       <a href="#Participatie">Participatie</a> |
                       <a href="#Procedurestap">Procedurestap</a> |
                       <a href="#Representatie">Representatie</a> |
+                      <a href="#Stukonderdeel">Stukonderdeel</a> |
                       <a href="#Zaak">Zaak</a> |
                     </p>
                   </div>
@@ -177,7 +181,6 @@
                     <dt>Eigenschappen</dt>
 
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Activiteit%3Agenereert%20een">genereert een</a>,
                       <a href="#Activiteit%3Ageplande%20start">geplande start</a>.</dd>
 
                   </dl>
@@ -197,20 +200,6 @@
                     </thead>
 
                     <tbody class="supertype">
-
-                      <tr id="Activiteit%3Agenereert%20een" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/generiek#GenereertEen">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/generiek#GenereertEen" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/generiek#GenereertEen" data-placement="right">
-                            genereert een</a>
-                          </code>
-                        </td>
-                        <td><a href="http://xmlns.com/foaf/0.1/Document" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/Document" data-placement="right">Document</a></td>
-                        <td>0...*</td>
-                        <td property="rdfs:comment">Een activiteit kan een document genereren</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
 
                       <tr id="Activiteit%3Ageplande%20start" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/generiek#geplandeStart">
                         <td>
@@ -236,7 +225,7 @@
               <h3 class="h3" id="Activiteit context"><a href="https://data.vlaanderen.be/ns/dossier#ActiviteitContext" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#ActiviteitContext" data-placement="right">Activiteit context</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Context van een relatie tussen documenten.</dd>
+                    <dt>Beschrijving</dt><dd>Context van een relatie tussen dossierstukken. Deze context maakt de samenhang van dossierstukken duidelijk in het kader van één bepaalde activiteit.</dd>
 
                     <dt>Eigenschappen</dt>
 
@@ -248,7 +237,7 @@
             </div>
 
             <div class="region region--no-space-top">
-              <h3 class="h3" id="Agent"><a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">Agent</a></h3>
+              <h3 class="h3" id="Agent"><a href="http://www.w3.org/ns/prov#Agent" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Agent" data-placement="right">Agent</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Iemand die of iets dat kan handelen of een effect kan teweeg brengen.</dd>
@@ -283,7 +272,7 @@
                             kan handelen in opdracht van</a>
                           </code>
                         </td>
-                        <td><a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">Agent</a></td>
+                        <td><a href="http://www.w3.org/ns/prov#Agent" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Agent" data-placement="right">Agent</a></td>
                         <td></td>
                         <td property="rdfs:comment">Een agent kan handelen in opdracht van een andere agent.</td>
                         <td property="vann:usageNote"></td>
@@ -361,10 +350,25 @@
             </div>
 
             <div class="region region--no-space-top">
+              <h3 class="h3" id="Collectie"><a href="http://www.w3.org/ns/prov#Collection" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Collection" data-placement="right">Collectie</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Een collectie is een entiteit die structuur geeft aan sommige onderdelen, die zelf entiteiten zijn.</dd>
+
+                    <dt>Eigenschappen</dt>
+
+                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+
+                  </dl>
+                </div>
+
+            </div>
+
+            <div class="region region--no-space-top">
               <h3 class="h3" id="Datum"><a href="https://purl.org/dc/terms/Date" data-toggle="tooltip" data-content="https://purl.org/dc/terms/Date" data-placement="right">Datum</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Een datum.</dd>
+                    <dt>Beschrijving</dt><dd>Beschrijving van een datum. Kan bestaan uit een effectieve datum tot de indicatie van een periode.</dd>
 
                     <dt>Eigenschappen</dt>
 
@@ -391,65 +395,16 @@
             </div>
 
             <div class="region region--no-space-top">
-              <h3 class="h3" id="Document"><a href="http://xmlns.com/foaf/0.1/Document" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/Document" data-placement="right">Document</a></h3>
+              <h3 class="h3" id="Document"><a href="http://dbpedia.org/ontology/Document" data-toggle="tooltip" data-content="http://dbpedia.org/ontology/Document" data-placement="right">Document</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Een origineel werk in de brede zin (een verslag, een opname, een boek...).</dd>
 
                     <dt>Eigenschappen</dt>
 
-                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Document%3Aheeft%20relatie%20tot">heeft relatie tot</a>,
-                      <a href="#Document%3Awordt%20voorgesteld%20door">wordt voorgesteld door</a>.</dd>
+                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
 
                   </dl>
-                </div>
-
-                <div class="u-table-overflow">
-                  <table class="data-table">
-                    <thead>
-                      <tr class="data-table__header">
-                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
-                        <th class="data-table__header-title--sortable">Verwacht Type</th>
-                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
-                        <th class="data-table__header-title--sortable">Beschrijving</th>
-                        <th class="data-table__header-title--sortable">Gebruik</th>
-                        <th class="data-table__header-title--sortable">Codelijst</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="supertype">
-
-                      <tr id="Document%3Aheeft%20relatie%20tot" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/generiek#HeeftRelatieTot">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/generiek#HeeftRelatieTot" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/generiek#HeeftRelatieTot" data-placement="right">
-                            heeft relatie tot</a>
-                          </code>
-                        </td>
-                        <td><a href="http://xmlns.com/foaf/0.1/Document" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/Document" data-placement="right">Document</a></td>
-                        <td>0...*</td>
-                        <td property="rdfs:comment">Een document heeft een relatie tot een document.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-
-                      <tr id="Document%3Awordt%20voorgesteld%20door" typeof="rdfs:Property" resource="http://semanticscience.org/resource/SIO_000205">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://semanticscience.org/resource/SIO_000205" data-toggle="tooltip" data-content="http://semanticscience.org/resource/SIO_000205" data-placement="right">
-                            wordt voorgesteld door</a>
-                          </code>
-                        </td>
-                        <td><a href="http://semanticscience.org/resource/SIO_000612" data-toggle="tooltip" data-content="http://semanticscience.org/resource/SIO_000612" data-placement="right">Representatie</a></td>
-                        <td>1...*</td>
-                        <td property="rdfs:comment">Een document wordt voorgesteld door een representatie.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-
-                    </tbody>
-                  </table>
                 </div>
 
             </div>
@@ -466,8 +421,7 @@
 
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
                       <a href="#Documentonderdeel%3Anummer">nummer</a>,
-                      <a href="#Documentonderdeel%3Atype">type</a>,
-                      <a href="#Documentonderdeel%3Awordt%20voorgesteld%20door">wordt voorgesteld door</a>.</dd>
+                      <a href="#Documentonderdeel%3Atype">type</a>.</dd>
 
                   </dl>
                 </div>
@@ -515,20 +469,6 @@
                         <td></td>
                       </tr>
 
-                      <tr id="Documentonderdeel%3Awordt%20voorgesteld%20door" typeof="rdfs:Property" resource="http://semanticscience.org/resource/SIO_000205">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://semanticscience.org/resource/SIO_000205" data-toggle="tooltip" data-content="http://semanticscience.org/resource/SIO_000205" data-placement="right">
-                            wordt voorgesteld door</a>
-                          </code>
-                        </td>
-                        <td><a href="http://semanticscience.org/resource/SIO_000612" data-toggle="tooltip" data-content="http://semanticscience.org/resource/SIO_000612" data-placement="right">Representatie</a></td>
-                        <td>1...*</td>
-                        <td property="rdfs:comment">Een documentonderdeel wordt voorgesteld door een representatie.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-
                     </tbody>
                   </table>
                 </div>
@@ -544,6 +484,7 @@
                     <dt>Eigenschappen</dt>
 
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Dossier%3Abestaat%20uit">bestaat uit</a>,
                       <a href="#Dossier%3Ais%20neerslag%20van%20zaak">is neerslag van zaak</a>.</dd>
 
                   </dl>
@@ -564,6 +505,20 @@
 
                     <tbody class="supertype">
 
+                      <tr id="Dossier%3Abestaat%20uit" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/dossier#BestaatUit">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/dossier#BestaatUit" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#BestaatUit" data-placement="right">
+                            bestaat uit</a>
+                          </code>
+                        </td>
+                        <td><a href="https://data.vlaanderen.be/ns/dossier#Dossierstuk" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#Dossierstuk" data-placement="right">Dossierstuk</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">...</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+
                       <tr id="Dossier%3Ais%20neerslag%20van%20zaak" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/dossier#IsNeerslagVanZaak">
                         <td>
                           <code property="rdfs:label">
@@ -571,7 +526,7 @@
                             is neerslag van zaak</a>
                           </code>
                         </td>
-                        <td><a href="https://data.vlaanderen.be/ns/dossier#Zaak" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#Zaak" data-placement="right">Zaak</a></td>
+                        <td><a href="http://dbpedia.org/ontology/Case" data-toggle="tooltip" data-content="http://dbpedia.org/ontology/Case" data-placement="right">Zaak</a></td>
                         <td>1</td>
                         <td property="rdfs:comment">Een dossier is een neerslag van een zaak.</td>
                         <td property="vann:usageNote"></td>
@@ -585,15 +540,16 @@
             </div>
 
             <div class="region region--no-space-top">
-              <h3 class="h3" id="Entiteit"><a href="https://data.vlaanderen.be/ns/generiek#Object" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/generiek#Object" data-placement="right">Entiteit</a></h3>
+              <h3 class="h3" id="Dossierstuk"><a href="https://data.vlaanderen.be/ns/dossier#Dossierstuk" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#Dossierstuk" data-placement="right">Dossierstuk</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>TODO</dd>
+                    <dt>Beschrijving</dt><dd>Een onderdeel uit het dossier dat iets beschrijft en/of informatie bevat.</dd>
 
                     <dt>Eigenschappen</dt>
 
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Entiteit%3Aidentificator">identificator</a>.</dd>
+                      <a href="#Dossierstuk%3Aheeft%20een%20relatie%20tot">heeft een relatie tot</a>,
+                      <a href="#Dossierstuk%3Awordt%20voorgesteld%20door">wordt voorgesteld door</a>.</dd>
 
                   </dl>
                 </div>
@@ -613,7 +569,85 @@
 
                     <tbody class="supertype">
 
-                      <tr id="Entiteit%3Aidentificator" typeof="rdfs:Property" resource="http://www.w3.org/ns/adms#identifier">
+                      <tr id="Dossierstuk%3Aheeft%20een%20relatie%20tot" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/dossier#HeeftRelatieTot2">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/dossier#HeeftRelatieTot2" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#HeeftRelatieTot2" data-placement="right">
+                            heeft een relatie tot</a>
+                          </code>
+                        </td>
+                        <td><a href="https://data.vlaanderen.be/ns/dossier#Dossierstuk" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#Dossierstuk" data-placement="right">Dossierstuk</a></td>
+                        <td></td>
+                        <td property="rdfs:comment">TODO</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+
+                      <tr id="Dossierstuk%3Awordt%20voorgesteld%20door" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/dossier#WordtVoorgesteldDoor">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/dossier#WordtVoorgesteldDoor" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#WordtVoorgesteldDoor" data-placement="right">
+                            wordt voorgesteld door</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/ns/dcat#Distribution" data-toggle="tooltip" data-content="http://www.w3.org/ns/dcat#Distribution" data-placement="right">Representatie</a></td>
+                        <td>1...*</td>
+                        <td property="rdfs:comment">Een document wordt voorgesteld door een representatie.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+
+            </div>
+
+            <div class="region region--no-space-top">
+              <h3 class="h3" id="Entiteit"><a href="http://www.w3.org/ns/prov#Entity" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Entity" data-placement="right">Entiteit</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Een entiteit is een fysiek, digitaal, conceptueel of ander soort ding met een aantal vaste aspecten; entiteiten kunnen echt of denkbeeldig zijn.</dd>
+
+                    <dt>Eigenschappen</dt>
+
+                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+
+                  </dl>
+                </div>
+
+            </div>
+
+            <div class="region region--no-space-top">
+              <h3 class="h3" id="Object"><a href="http://www.w3.org/ns/prov#Entity" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Entity" data-placement="right">Object</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Entiteit waarvan alle entiteiten zijn afgeleid.</dd>
+
+                    <dt>Eigenschappen</dt>
+
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Object%3Aidentificator">identificator</a>.</dd>
+
+                  </dl>
+                </div>
+
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+
+                      <tr id="Object%3Aidentificator" typeof="rdfs:Property" resource="http://www.w3.org/ns/adms#identifier">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/adms#identifier" data-toggle="tooltip" data-content="http://www.w3.org/ns/adms#identifier" data-placement="right">
@@ -664,7 +698,7 @@
             </div>
 
             <div class="region region--no-space-top">
-              <h3 class="h3" id="Representatie"><a href="http://semanticscience.org/resource/SIO_000612" data-toggle="tooltip" data-content="http://semanticscience.org/resource/SIO_000612" data-placement="right">Representatie</a></h3>
+              <h3 class="h3" id="Representatie"><a href="http://www.w3.org/ns/dcat#Distribution" data-toggle="tooltip" data-content="http://www.w3.org/ns/dcat#Distribution" data-placement="right">Representatie</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Een representatie is een bepaalde weergave van een entiteit.</dd>
@@ -679,7 +713,71 @@
             </div>
 
             <div class="region region--no-space-top">
-              <h3 class="h3" id="Zaak"><a href="https://data.vlaanderen.be/ns/dossier#Zaak" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#Zaak" data-placement="right">Zaak</a></h3>
+              <h3 class="h3" id="Stukonderdeel"><a href="https://data.vlaanderen.be/ns/dossier#Stukonderdeel" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#Stukonderdeel" data-placement="right">Stukonderdeel</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>TODO</dd>
+
+                    <dt>Eigenschappen</dt>
+
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Stukonderdeel%3A"></a>,
+                      <a href="#Stukonderdeel%3Awordt%20voorgesteld%20door">wordt voorgesteld door</a>.</dd>
+
+                  </dl>
+                </div>
+
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+
+                      <tr id="Stukonderdeel%3A" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/dossier#isDeelVan">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/dossier#isDeelVan" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#isDeelVan" data-placement="right">
+                            </a>
+                          </code>
+                        </td>
+                        <td><a href="https://data.vlaanderen.be/ns/dossier#Stukonderdeel" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#Stukonderdeel" data-placement="right">Stukonderdeel</a></td>
+                        <td></td>
+                        <td property="rdfs:comment">TODO</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+
+                      <tr id="Stukonderdeel%3Awordt%20voorgesteld%20door" typeof="rdfs:Property" resource="http://semanticscience.org/resource/SIO_000205">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://semanticscience.org/resource/SIO_000205" data-toggle="tooltip" data-content="http://semanticscience.org/resource/SIO_000205" data-placement="right">
+                            wordt voorgesteld door</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/ns/dcat#Distribution" data-toggle="tooltip" data-content="http://www.w3.org/ns/dcat#Distribution" data-placement="right">Representatie</a></td>
+                        <td>1...*</td>
+                        <td property="rdfs:comment">Een documentonderdeel wordt voorgesteld door een representatie.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+
+            </div>
+
+            <div class="region region--no-space-top">
+              <h3 class="h3" id="Zaak"><a href="http://dbpedia.org/ontology/Case" data-toggle="tooltip" data-content="http://dbpedia.org/ontology/Case" data-placement="right">Zaak</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Een samenhangende hoeveelheid werk met een aanleiding en een beoogd resultaat.</dd>
@@ -729,7 +827,7 @@
                             heeft relatie tot</a>
                           </code>
                         </td>
-                        <td><a href="https://data.vlaanderen.be/ns/dossier#Zaak" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#Zaak" data-placement="right">Zaak</a></td>
+                        <td><a href="http://dbpedia.org/ontology/Case" data-toggle="tooltip" data-content="http://dbpedia.org/ontology/Case" data-placement="right">Zaak</a></td>
                         <td></td>
                         <td property="rdfs:comment">Een zaak heeft een relatie tot een zaak.</td>
                         <td property="vann:usageNote"></td>
