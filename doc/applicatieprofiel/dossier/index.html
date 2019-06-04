@@ -48,7 +48,7 @@
               <div class="head" role="contentinfo" id="respecHeader">
                 <dl>
                   <dt>Laatste aanpassing</dt>
-                  <dd>2019-05-29</dd>
+                  <dd>2019-06-04</dd>
 
 
 
@@ -145,10 +145,9 @@
                       <a href="#Collectie">Collectie</a> |
                       <a href="#Datum">Datum</a> |
                       <a href="#Dienstverlening (consumptie)">Dienstverlening (consumptie)</a> |
-                      <a href="#Document">Document</a> |
-                      <a href="#Documentonderdeel">Documentonderdeel</a> |
                       <a href="#Dossier">Dossier</a> |
                       <a href="#Dossierstuk">Dossierstuk</a> |
+                      <a href="#eenheid van werk">eenheid van werk</a> |
                       <a href="#Entiteit">Entiteit</a> |
                       <a href="#Object">Object</a> |
                       <a href="#Participatie">Participatie</a> |
@@ -357,9 +356,43 @@
 
                     <dt>Eigenschappen</dt>
 
-                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Collectie%3Ais%20neerslag%20van">is neerslag van</a>.</dd>
 
                   </dl>
+                </div>
+
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+
+                      <tr id="Collectie%3Ais%20neerslag%20van" typeof="rdfs:Property" resource="http://dbpedia.org/ontology/isPartOf">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://dbpedia.org/ontology/isPartOf" data-toggle="tooltip" data-content="http://dbpedia.org/ontology/isPartOf" data-placement="right">
+                            is neerslag van</a>
+                          </code>
+                        </td>
+                        <td><a href="http://dbpedia.org/ontology/UnitOfWork" data-toggle="tooltip" data-content="http://dbpedia.org/ontology/UnitOfWork" data-placement="right">dbo:UnitOfWork</a></td>
+                        <td></td>
+                        <td property="rdfs:comment">een collectiie is een neerslag van een eenheid van wekr</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+
+                    </tbody>
+                  </table>
                 </div>
 
             </div>
@@ -395,87 +428,6 @@
             </div>
 
             <div class="region region--no-space-top">
-              <h3 class="h3" id="Document"><a href="http://dbpedia.org/ontology/Document" data-toggle="tooltip" data-content="http://dbpedia.org/ontology/Document" data-placement="right">Document</a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Beschrijving</dt><dd>Een origineel werk in de brede zin (een verslag, een opname, een boek...).</dd>
-
-                    <dt>Eigenschappen</dt>
-
-                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
-
-                  </dl>
-                </div>
-
-            </div>
-
-            <div class="region region--no-space-top">
-              <h3 class="h3" id="Documentonderdeel"><a href="https://data.vlaanderen.be/ns/generiek#DocumentOnderdeel" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/generiek#DocumentOnderdeel" data-placement="right">Documentonderdeel</a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Beschrijving</dt><dd>Een apart onderdeel van een groter document of verzameld document.</dd>
-
-                    <dt>Gebruik</dt><dd>Bv artikel, hoofdstuk, paragraaf...</dd>
-
-                    <dt>Eigenschappen</dt>
-
-                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Documentonderdeel%3Anummer">nummer</a>,
-                      <a href="#Documentonderdeel%3Atype">type</a>.</dd>
-
-                  </dl>
-                </div>
-
-                <div class="u-table-overflow">
-                  <table class="data-table">
-                    <thead>
-                      <tr class="data-table__header">
-                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
-                        <th class="data-table__header-title--sortable">Verwacht Type</th>
-                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
-                        <th class="data-table__header-title--sortable">Beschrijving</th>
-                        <th class="data-table__header-title--sortable">Gebruik</th>
-                        <th class="data-table__header-title--sortable">Codelijst</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="supertype">
-
-                      <tr id="Documentonderdeel%3Anummer" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/generiek#nummer">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/generiek#nummer" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/generiek#nummer" data-placement="right">
-                            nummer</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/2001/XMLSchema#integer" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#integer" data-placement="right">Integer</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">Nummer vh documentonderdeel.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-
-                      <tr id="Documentonderdeel%3Atype" typeof="rdfs:Property" resource="http://purl.org/dc/terms/type">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://purl.org/dc/terms/type" data-toggle="tooltip" data-content="http://purl.org/dc/terms/type" data-placement="right">
-                            type</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Code</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">Aard van het documentonderdeel.</td>
-                        <td property="vann:usageNote">Bv artikel, paragraaf, hoofdstuk...</td>
-                        <td></td>
-                      </tr>
-
-                    </tbody>
-                  </table>
-                </div>
-
-            </div>
-
-            <div class="region region--no-space-top">
               <h3 class="h3" id="Dossier"><a href="https://data.vlaanderen.be/ns/dossier#Dossier" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#Dossier" data-placement="right">Dossier</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
@@ -484,6 +436,7 @@
                     <dt>Eigenschappen</dt>
 
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Dossier%3A"></a>,
                       <a href="#Dossier%3Abestaat%20uit">bestaat uit</a>,
                       <a href="#Dossier%3Ais%20neerslag%20van%20zaak">is neerslag van zaak</a>.</dd>
 
@@ -504,6 +457,20 @@
                     </thead>
 
                     <tbody class="supertype">
+
+                      <tr id="Dossier%3A" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/dossier#test">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/dossier#test" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#test" data-placement="right">
+                            </a>
+                          </code>
+                        </td>
+                        <td><a href="" data-toggle="tooltip" data-content="" data-placement="right">int</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">TODO</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
 
                       <tr id="Dossier%3Abestaat%20uit" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/dossier#BestaatUit">
                         <td>
@@ -599,6 +566,21 @@
 
                     </tbody>
                   </table>
+                </div>
+
+            </div>
+
+            <div class="region region--no-space-top">
+              <h3 class="h3" id="eenheid van werk"><a href="http://dbpedia.org/ontology/UnitOfWork" data-toggle="tooltip" data-content="http://dbpedia.org/ontology/UnitOfWork" data-placement="right">eenheid van werk</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>De notie van één hoeveelheid werk.</dd>
+
+                    <dt>Eigenschappen</dt>
+
+                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+
+                  </dl>
                 </div>
 
             </div>
@@ -721,7 +703,8 @@
                     <dt>Eigenschappen</dt>
 
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Stukonderdeel%3A"></a>,
+                      <a href="#Stukonderdeel%3Ais%20deel%20van">is deel van</a>,
+                      <a href="#Stukonderdeel%3Ais%20onderdeel%20van">is onderdeel van</a>,
                       <a href="#Stukonderdeel%3Awordt%20voorgesteld%20door">wordt voorgesteld door</a>.</dd>
 
                   </dl>
@@ -742,16 +725,30 @@
 
                     <tbody class="supertype">
 
-                      <tr id="Stukonderdeel%3A" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/dossier#isDeelVan">
+                      <tr id="Stukonderdeel%3Ais%20deel%20van" typeof="rdfs:Property" resource="http://dbpedia.org/ontology/isPartOf">
                         <td>
                           <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/dossier#isDeelVan" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#isDeelVan" data-placement="right">
-                            </a>
+                            <a href="http://dbpedia.org/ontology/isPartOf" data-toggle="tooltip" data-content="http://dbpedia.org/ontology/isPartOf" data-placement="right">
+                            is deel van</a>
                           </code>
                         </td>
                         <td><a href="https://data.vlaanderen.be/ns/dossier#Stukonderdeel" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#Stukonderdeel" data-placement="right">Stukonderdeel</a></td>
                         <td></td>
-                        <td property="rdfs:comment">TODO</td>
+                        <td property="rdfs:comment">Een stukonderdeel kan deel zijn van een ander stukonderdeel.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+
+                      <tr id="Stukonderdeel%3Ais%20onderdeel%20van" typeof="rdfs:Property" resource="http://dbpedia.org/ontology/isPartOf">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://dbpedia.org/ontology/isPartOf" data-toggle="tooltip" data-content="http://dbpedia.org/ontology/isPartOf" data-placement="right">
+                            is onderdeel van</a>
+                          </code>
+                        </td>
+                        <td><a href="https://data.vlaanderen.be/ns/dossier#Dossierstuk" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#Dossierstuk" data-placement="right">Dossierstuk</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Een verwante bron waarin de beschreven bron fysiek of logisch is opgenomen.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
