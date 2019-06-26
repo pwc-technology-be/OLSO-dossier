@@ -48,7 +48,7 @@
               <div class="head" role="contentinfo" id="respecHeader">
                 <dl>
                   <dt>Laatste aanpassing</dt>
-                  <dd>2019-06-25</dd>
+                  <dd>2019-06-26</dd>
 
                   
                   
@@ -97,7 +97,11 @@
             <div class="region region--no-space-top typography" id="summary">
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Samenvatting</h2>
                 
-                
+    <p>Dit is een basis applicatieprofiel op het <a href="https://test.data.vlaanderen.be/ns/dossier" target="_blank">OSLO Dossier Vocabularium.</a></p>
+
+    <p>Het conceptueel informatiemodel vormt de basis voor de uitwisseling van dossiergegevens tussen verschillende diensten. Het definieert een aantal abstracte entiteiten, relevante eigenschappen en hun onderlinge relaties. Dit conceptueel informatiemodel vormt de basis voor ontwikkelaars en databankbeheerders om verder uit te werken tot een fysiek datamodel. Het vocabularium geeft een overzicht van de gebruikte terminologie en daaraan gekoppeld definities, het basis applicatieprofiel brengt deze termen samen in een generieke specificatie voor gegevensuitwisseling.</p>
+
+
             </div>
 
             <div class="region region--no-space-top typography" id="status">
@@ -138,10 +142,8 @@
                     <p>In dit document wordt correct gebruik van de volgende entiteiten toegelicht:
                       <br />
                       |
-                      <a href="#"></a> |
-                      <a href="#"></a> |
                       <a href="#Activiteit">Activiteit</a> |
-                      <a href="#Activiteit context">Activiteit context</a> |
+                      <a href="#Activiteitcontext">Activiteitcontext</a> |
                       <a href="#Agent">Agent</a> |
                       <a href="#Besluit">Besluit</a> |
                       <a href="#Collectie">Collectie</a> |
@@ -149,14 +151,16 @@
                       <a href="#Dienstverlening (consumptie)">Dienstverlening (consumptie)</a> |
                       <a href="#Dossier">Dossier</a> |
                       <a href="#Dossierstuk">Dossierstuk</a> |
-                      <a href="#eenheid van werk">eenheid van werk</a> |
+                      <a href="#Eenheid van werk">Eenheid van werk</a> |
                       <a href="#Entiteit">Entiteit</a> |
-                      <a href="#formaat">formaat</a> |
-                      <a href="#informatieclassificatie">informatieclassificatie</a> |
+                      <a href="#Formaat">Formaat</a> |
+                      <a href="#Informatieclassificatie">Informatieclassificatie</a> |
                       <a href="#Object">Object</a> |
                       <a href="#Participatie">Participatie</a> |
                       <a href="#Procedurestap">Procedurestap</a> |
+                      <a href="#Project">Project</a> |
                       <a href="#Representatie">Representatie</a> |
+                      <a href="#Serie">Serie</a> |
                       <a href="#Stukonderdeel">Stukonderdeel</a> |
                       <a href="#Zaak">Zaak</a> |
                     </p>
@@ -173,36 +177,6 @@
             </div>
             <div class="region region--no-space-top">
               <h2 class="h2">Entiteiten</h2>
-            </div>
-            
-            <div class="region region--no-space-top">
-              <h3 class="h3" id=""><a href="https://data.vlaanderen.be/ns/dossier#Serie" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#Serie" data-placement="right"></a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Beschrijving</dt><dd>TODO</dd>
-                    
-                    <dt>Eigenschappen</dt>
-                    
-                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
-                    
-                  </dl>
-                </div>
-                
-            </div>
-            
-            <div class="region region--no-space-top">
-              <h3 class="h3" id=""><a href="https://data.vlaanderen.be/ns/dossier#dbo:Project" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#dbo:Project" data-placement="right"></a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Beschrijving</dt><dd>TODO</dd>
-                    
-                    <dt>Eigenschappen</dt>
-                    
-                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
-                    
-                  </dl>
-                </div>
-                
             </div>
             
             <div class="region region--no-space-top">
@@ -330,7 +304,7 @@
             </div>
             
             <div class="region region--no-space-top">
-              <h3 class="h3" id="Activiteit context"><a href="https://data.vlaanderen.be/ns/dossier#ActiviteitContext" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#ActiviteitContext" data-placement="right">Activiteit context</a></h3>
+              <h3 class="h3" id="Activiteitcontext"><a href="https://data.vlaanderen.be/ns/dossier#ActiviteitContext" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#ActiviteitContext" data-placement="right">Activiteitcontext</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Context van een relatie tussen dossierstukken. Deze context maakt de samenhang van dossierstukken duidelijk in het kader van één bepaalde activiteit.</dd>
@@ -338,7 +312,7 @@
                     <dt>Eigenschappen</dt>
                     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Activiteit%20context%3AURI">URI</a>.</dd>
+                      <a href="#Activiteitcontext%3AURI">URI</a>.</dd>
                     
                   </dl>
                 </div>
@@ -358,7 +332,7 @@
 
                     <tbody class="supertype">
                     
-                      <tr id="Activiteit%20context%3AURI" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/dossier#activiteitURI">
+                      <tr id="Activiteitcontext%3AURI" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/dossier#activiteitURI">
                         <td>
                           <code property="rdfs:label">
                             <a href="https://data.vlaanderen.be/ns/dossier#activiteitURI" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#activiteitURI" data-placement="right">
@@ -495,7 +469,7 @@
               <h3 class="h3" id="Collectie"><a href="http://www.w3.org/ns/prov#Collection" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Collection" data-placement="right">Collectie</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Een collectie is een entiteit die structuur geeft aan sommige onderdelen, die zelf entiteiten zijn.</dd>
+                    <dt>Beschrijving</dt><dd>Een collectie is een entiteit die structuur geeft aan sommige bestanddelen, die zelf entiteiten zijn. Deze bestanddelen zouden deel uitmaken van de collecties.</dd>
                     
                     <dt>Eigenschappen</dt>
                     
@@ -834,10 +808,10 @@
             </div>
             
             <div class="region region--no-space-top">
-              <h3 class="h3" id="eenheid van werk"><a href="http://dbpedia.org/ontology/UnitOfWork" data-toggle="tooltip" data-content="http://dbpedia.org/ontology/UnitOfWork" data-placement="right">eenheid van werk</a></h3>
+              <h3 class="h3" id="Eenheid van werk"><a href="http://dbpedia.org/ontology/UnitOfWork" data-toggle="tooltip" data-content="http://dbpedia.org/ontology/UnitOfWork" data-placement="right">Eenheid van werk</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>De notie van één hoeveelheid werk.</dd>
+                    <dt>Beschrijving</dt><dd>Deze entiteit is bedoeld om de notie van een hoeveelheid werk over te brengen. Het verschilt van Activiteit in die zin dat het een duidelijk einde heeft en gemeten wordt.</dd>
                     
                     <dt>Eigenschappen</dt>
                     
@@ -852,7 +826,7 @@
               <h3 class="h3" id="Entiteit"><a href="http://www.w3.org/ns/prov#Entity" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#Entity" data-placement="right">Entiteit</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>Een entiteit is een fysiek, digitaal, conceptueel of ander soort ding met een aantal vaste aspecten; entiteiten kunnen echt of denkbeeldig zijn.</dd>
+                    <dt>Beschrijving</dt><dd>Iets met een duidelijk en onafhankelijk bestaan.</dd>
                     
                     <dt>Eigenschappen</dt>
                     
@@ -864,7 +838,7 @@
             </div>
             
             <div class="region region--no-space-top">
-              <h3 class="h3" id="formaat"><a href="https://data.vlaanderen.be/ns/dossier#Formaat" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#Formaat" data-placement="right">formaat</a></h3>
+              <h3 class="h3" id="Formaat"><a href="https://data.vlaanderen.be/ns/dossier#Formaat" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#Formaat" data-placement="right">Formaat</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Enumeratie van mogelijke formaten van een stuk(onderdeel).</dd>
@@ -879,7 +853,7 @@
             </div>
             
             <div class="region region--no-space-top">
-              <h3 class="h3" id="informatieclassificatie"><a href="http://www.w3.org/2004/02/skos/core" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core" data-placement="right">informatieclassificatie</a></h3>
+              <h3 class="h3" id="Informatieclassificatie"><a href="http://www.w3.org/2004/02/skos/core" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core" data-placement="right">Informatieclassificatie</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Enumeratie van de verschillende informatieclassificatie niveaus.</dd>
@@ -1037,10 +1011,40 @@
             </div>
             
             <div class="region region--no-space-top">
+              <h3 class="h3" id="Project"><a href="http://dbpedia.org/ontology/project" data-toggle="tooltip" data-content="http://dbpedia.org/ontology/project" data-placement="right">Project</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Een project is een tijdelijke inspanning om bepaalde doelstellingen te bereiken.</dd>
+                    
+                    <dt>Eigenschappen</dt>
+                    
+                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+                    
+                  </dl>
+                </div>
+                
+            </div>
+            
+            <div class="region region--no-space-top">
               <h3 class="h3" id="Representatie"><a href="http://www.w3.org/ns/dcat#Distribution" data-toggle="tooltip" data-content="http://www.w3.org/ns/dcat#Distribution" data-placement="right">Representatie</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Beschrijving</dt><dd>Een representatie is een bepaalde weergave van een entiteit.</dd>
+                    
+                    <dt>Eigenschappen</dt>
+                    
+                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+                    
+                  </dl>
+                </div>
+                
+            </div>
+            
+            <div class="region region--no-space-top">
+              <h3 class="h3" id="Serie"><a href="https://data.vlaanderen.be/ns/dossier#Serie" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#Serie" data-placement="right">Serie</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Een serie is een collectie van entiteiten die gemeenschappelijke eigenschappen deelt.</dd>
                     
                     <dt>Eigenschappen</dt>
                     
@@ -1259,7 +1263,7 @@
                             kan deel zijn van</a>
                           </code>
                         </td>
-                        <td><a href="https://data.vlaanderen.be/ns/dossier#dbo:Project" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/dossier#dbo:Project" data-placement="right">dbo:Project</a></td>
+                        <td><a href="http://dbpedia.org/ontology/project" data-toggle="tooltip" data-content="http://dbpedia.org/ontology/project" data-placement="right">dbo:Project</a></td>
                         <td>0...*</td>
                         <td property="rdfs:comment">Een zaak kan deel zijn van een project</td>
                         <td property="vann:usageNote"></td>
@@ -1319,8 +1323,8 @@
             <div class="region region--no-space-top" id="jsonld">
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">JSON-LD context</h2>
                 
-                <p>Een herbruikbare JSON-LD context definitie voor dit applicatieprofiel is terug te vinden op: <a href="https://data.vlaanderen.be/context/" target="_blank">https://data.vlaanderen.be/context/</a></p>
-                
+<p>Een herbruikbare JSON-LD context definitie voor dit applicatieprofiel is terug te vinden op: <a href="https://test.data.vlaanderen.be/context/dossier.jsonld" target="_blank">https://test.data.vlaanderen.be/context/dossier.jsonld</a></p>
+
             </div>
           </div>
           <div class="col--3-12 col--12-12--s col--4-12--m push--1-12 push--reset--m" id="sideNav">
